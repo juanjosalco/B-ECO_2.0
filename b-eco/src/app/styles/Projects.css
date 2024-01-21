@@ -1,0 +1,25 @@
+.arrows{
+    font-size: 120px;
+    color: #CDCDCD;
+    align-self: center;
+}
+.arrows:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.circles {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #CDCDCD;
+    margin-inline: 8px;
+}
+
+.circle-colored {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #DE7A5E;
+    margin-inline: 8px;
+}

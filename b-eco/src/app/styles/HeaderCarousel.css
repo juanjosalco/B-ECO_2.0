@@ -1,0 +1,13 @@
+.carousel-img {
+  height: 100vh;
+  width: 100%;
+}
+
+.fade-in {
+  transition: opacity 1s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
