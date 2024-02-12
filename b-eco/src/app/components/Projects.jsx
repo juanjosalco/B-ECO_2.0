@@ -11,6 +11,7 @@ import { projectsResources } from "../utils/Projects";
 const Projects = () => {
   const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPageLoading, setIsPageLoading] = useState(false);
 
   useEffect(() => {
     const listNode = listRef.current;
@@ -18,14 +19,16 @@ const Projects = () => {
     // Check if listNode is defined before accessing its properties
     if (listNode) {
       const imgNode = listNode.querySelectorAll("img")[currentIndex];
-
-      if (imgNode) {
-        imgNode.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-          inline: "center",
-        });
+      if(isPageLoading){
+        if (imgNode) {
+          imgNode.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "center",
+          });
+        }
       }
+      setIsPageLoading(true);
     }
   }, [currentIndex]);
 
@@ -83,7 +86,7 @@ const Projects = () => {
   };
 
   return (
-    <>
+    <div>
       <h2 className="title" style={{ marginBottom: 50 }}>
         Proyectos
       </h2>
@@ -131,7 +134,7 @@ const Projects = () => {
           ></div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
