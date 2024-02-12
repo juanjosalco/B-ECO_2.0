@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import HeaderCarousel from './components/HeaderCarousel'
 import WhoAreWe from './components/WhoAreWe'
 import Projects from './components/Projects'
+import FollowUs from './components/FollowUs'
 
 //Styles
 import './styles/Page.css'
@@ -17,7 +18,9 @@ export default function Home() {
       <WhoAreWe/>
       <div id="proyectos"/>
       <Projects/>
-      <div id="" style={{marginTop: 80}}/>
+      <div id="follow-us"/>
+      <FollowUs/>
+      <div style={{marginTop: 80}}/>
     </main>
   ) 
 }
