@@ -1,0 +1,75 @@
+.containerCards {
+    margin-inline: 1rem;
+    /* min-height: 380px; */
+    border: solid 2px #006733;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.containerCards:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    height: 172px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.text-container {
+    text-align: left;
+    font-size: .9rem;
+    padding-block: .5rem;
+    padding-inline: .5rem;
+    display: block; 
+    line-height: 1.3; 
+}
+
+.socialMedia {
+    padding: .5rem;
+    text-align: justify;
+    line-height: 1.3; 
+    display: flex;
+}
+
+.logo {
+    width: 4.5rem;
+    margin-top: auto;
+}
+
+.account-info {
+    padding-inline: .5rem;
+    margin-left: .2rem;
+}
+
+.tittle {
+    padding-top: 1rem;
+    font-weight: bold;
+    font-size: large;
+}
+
+.account-name {
+    padding-top: .5rem;
+    font-size: .76rem;
+}
+
+.referencia-card{
+    text-decoration: none;
+    color: black;
+}
+
+.referencia-card:visited{
+    color: black;
+}
+
+.referencia-card:active{
+    color: black;
+}
