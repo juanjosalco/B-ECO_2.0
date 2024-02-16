@@ -4,8 +4,9 @@ import HeaderCarousel from './components/HeaderCarousel'
 import WhoAreWe from './components/WhoAreWe'
 import Projects from './components/Projects'
 import FollowUs from './components/FollowUs'
+import Contact from './components/Contact'
 
-//Styles
+// Styles
 import './styles/Page.css'
 
 export default function Home() {
@@ -18,9 +19,13 @@ export default function Home() {
       <WhoAreWe/>
       <div id="proyectos"/>
       <Projects/>
-      <div id="follow-us"/>
+      <div id="siguenos"/>
       <FollowUs/>
-      <div style={{marginTop: 80}}/>
+      <div id="contacto"/>
+      <Contact/>
+      {/* <div style={{marginTop: 80}}/> */}
     </main>
   ) 
 }
+
+

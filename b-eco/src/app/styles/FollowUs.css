@@ -5,7 +5,7 @@
 }
 
 .content-section{
-    margin-top: 80px;
+  margin-top: 80px;
   display: flex;
   background-color: white;
   align-items: center;
@@ -46,16 +46,6 @@
   font-size: 48px;
   text-align: center;
 }
-
-/* .QS > section > p{
-    font-size: 1.2rem;
-    text-align: center;
-} */
-
-/* .content-section > section > p{
-  color: var(--B-eco-green);
-  text-align: center;
-} */
 
 .contact-email{
   color: var(--B-eco-green);
