@@ -1,14 +1,124 @@
 .contactUsContainer {
-    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 80px;
+    align-items: center;
+    align-content: center;
+}
+
+
+.contactIntro {
+  padding-inline: 10rem;
+}
+
+.contactInfo {
+    margin-top: 80px;
+    text-align: justify;
+}
+
+.names {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.firstNameBox {
+    display: flex;
+    flex: column;
+    flex: 1;
+}
+
+.firstName {
+  flex-direction: row;
+  display: flex;
+  flex: 1;
+}
+
+.lastName {
     display: flex;
     flex-direction: column;
-
+    flex: 1;
 }
 
-/* .contactContainer {
-
+.contactInput {
+    flex: 1;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: .9rem;
+    box-shadow: 0px 0px 1px 1px rgba(72, 77, 77, 0.4);
+    background-color: #efefef69;
 }
 
-.button {
+.email{
+  display: flex;
+  flex: 1;
+}
 
-} */
+.tel{
+  display: flex;
+  flex: 1;
+}
+
+.subject{
+  display: flex;
+  flex: 1;
+}
+
+.FirstcontactInput{
+    flex: 1;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: .9rem;
+    box-shadow: 0px 0px 1px 1px rgba(72, 77, 77, 0.4);
+    background-color: #efefef69;
+}
+
+.subjectInput{
+    flex: 1;
+    height: 8rem;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: .9rem;
+    box-shadow: 0px 0px 1px 1px rgba(72, 77, 77, 0.4);
+    background-color: #efefef9b;
+}
+
+.sendInfo {
+  align-items: center;
+}
+
+.buttonEnviar {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #004697;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.buttonEnviar span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .buttonEnviar span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .buttonEnviar:hover span {
+    padding-right: 25px;
+  }
+  
+  .buttonEnviar:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

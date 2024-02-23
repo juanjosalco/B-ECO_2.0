@@ -24,36 +24,24 @@ const Navbar = () => {
         ></img>
       </div>
       <div className="rightSide">
-        <div>
-          <a href="#inicio" className="section">
+          <a href="#inicio" className="block">
             Inicio
           </a>
-        </div>
-        <div>
-          <a href="#quienes-somos" className="section">
+          <a href="#quienes-somos" className="block">
             ¿Quiénes somos?
           </a>
-        </div>
-        <div>
-          <a href="#proyectos" className="section">
+          <a href="#proyectos" className="block">
             Proyectos
           </a>
-        </div>
-        <div>
-          <a href="#ecoserpiente" className="section">
+          <a href="#ecoserpiente" className="block">
             EcoSerpiente
           </a>
-        </div>
-        <div>
-          <a href="#siguenos" className="section">
+          <a href="#siguenos" className="block">
             Síguenos
           </a>
-        </div>
-        <div>
-          <a href="#contacto" className="section">
+          <a href="#contacto" className="block">
             Contacto
           </a>
-        </div>
       </div>
     </div>
   );
