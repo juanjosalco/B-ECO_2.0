@@ -19,6 +19,10 @@ form{
 
 }
 
+.contactIntro{
+  padding-inline: 48px;
+}
+
 .contactUsContainer {
     text-align: center;
     margin-top: 80px;
