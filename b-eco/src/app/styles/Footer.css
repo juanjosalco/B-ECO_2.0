@@ -1,0 +1,22 @@
+footer{
+    background-color: #006733;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.content{
+    padding: 30px 40px 40px;
+    flex-direction: row;
+    display: flex;
+}
+
+.rightsText{
+    display: flex;
+    flex: 1;
+    color: #FFFFFF;
+}
+
+
+.informationText{
+    color: #FFFFFF;
+} 
