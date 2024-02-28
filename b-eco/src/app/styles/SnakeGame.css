@@ -1,0 +1,199 @@
+table {
+    border-collapse: collapse;
+    align-self: center;
+  }
+
+  td {
+    width: 5rem;
+    height: 4rem;
+    border: .01rem solid rgba(9, 43, 9, 0.194);
+  }
+
+  .snake-cell {
+    background-color: orangered;
+  }
+
+  .up-head-image{
+    background-image: url('../Assets/Snake/HeadUp.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+
+  .down-head-image{
+    background-image: url('../Assets/Snake/HeadDown.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+
+  .left-head-image{
+    background-image: url('../Assets/Snake/HeadLeft.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+
+  .right-head-image{
+    background-image: url('../Assets/Snake/HeadRight.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+  
+  .body {
+    background-image: url('../Assets/Snake/BodySprite.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+  
+  .food-cell {
+    background-image: url('../Assets/TrashPics/Bag.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.food-cell2 {
+      background-image: url('../Assets/TrashPics/Banana.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.food-cell3 {
+      background-image: url('../Assets/TrashPics/Bottle.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.food-cell4 {
+  
+  background-image: url('../Assets/TrashPics/BrokenGlass.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+.food-cell5 {
+  
+  background-image: url('../Assets/TrashPics/Can.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+.food-cell6 {
+  
+  background-image: url('../Assets/TrashPics/Foam.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+.food-cell7 {
+  
+  background-image: url('../Assets/TrashPics/FoodWaste.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+.food-cell8 {
+  
+  background-image: url('../Assets/TrashPics/Needle.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+.food-cell9 {
+  
+  background-image: url('../Assets/TrashPics/Newspaper.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+.food-cell10 {
+  background-image: url('../Assets/TrashPics/PlasticBag.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+  gameContainer {
+    margin: auto;
+  }
+
+  body {
+    background-image: url('../Assets/Snake/park.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+  }
+
+  .custom-button {
+    margin: 1rem;
+    background-color: #00933D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 0.2rem;
+    box-shadow: 1px 3px 4px #006733 ;
+    transition: background-color 0.3s ease;
+  }
+
+  .custom-button:hover {
+    background-color: #006733; /* Change color on hover */
+  }
+
+  .intructions {
+    margin: 1rem;
+    background-color: #00933D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 0.2rem;
+    box-shadow: 1px 3px 4px #006733 ;
+    transition: background-color 0.3s ease;
+  }
+
+  .score-button {
+    width: 10rem;
+    margin: 1rem;
+    background-color: #004697;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 0.2rem;
+    box-shadow: 1px 3px 4px #032c5c ;
+    transition: background-color 0.3s ease;
+    flex-wrap: wrap;
+  }
+
+  .highestsScore-button {
+    width: 14rem;
+    margin: 1rem;
+    background-color: #004697;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 0.2rem;
+    box-shadow: 1px 3px 4px #032c5c ;
+    transition: background-color 0.3s ease;
+    flex-wrap: wrap;
+  }
+
+  .play-buttons {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 

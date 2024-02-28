@@ -40,7 +40,6 @@ const Projects = () => {
   };
 
   const slideStyles = {
-    width: "100%",
     height: "100%",
     borderTopLeftRadius: "10px",
     borderBottomLeftRadius: "10px",
@@ -56,6 +55,7 @@ const Projects = () => {
     padding: "1rem",
     textAlign: "justify",
     justifyContent: "flex-start",
+    overflow: "scroll",
   };
 
   const mainStyles = {
@@ -86,7 +86,7 @@ const Projects = () => {
   };
 
   return (
-    <div>
+    <div className="containerProject">
       <h2 className="title" style={{ marginBottom: 50 }}>
         Proyectos
       </h2>
