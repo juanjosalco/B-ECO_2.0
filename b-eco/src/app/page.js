@@ -20,8 +20,8 @@ export default function Home() {
       <WhoAreWe/>
       <div id="proyectos"/>
       <Projects/>
-      {/* <div id="siguenos"/>
-      <FollowUs/> */}
+      <div id="siguenos"/>
+      <FollowUs/>
       <div id="contacto"/>
       <Contact/>
       <div id="footer"/>
