@@ -39,7 +39,15 @@
 .textWho {
     flex: 1;
     text-align: justify;
-    margin-inline: 2rem;
+    padding-inline: 2rem;
+}
+
+@media (max-width: 444px) {
+    .textWho {
+        flex: 1;
+        text-align: justify;
+        padding-inline: 0rem;
+    }
 }
 
 .title {
