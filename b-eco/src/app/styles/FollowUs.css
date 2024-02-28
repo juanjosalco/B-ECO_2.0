@@ -95,6 +95,13 @@
   }
 }
 
+@media (max-width: 444px) {
+  .cards{
+    align-self: center;
+    padding: 0% 0% 0% 0%;
+  }
+}
+
 .textF {
     font-size: 1.2rem;
     padding-inline: 2rem;
@@ -105,5 +112,11 @@
 @media screen and (min-width: 1000px) {
   .textF {
     padding-inline: 8rem;
+  }
+}
+
+@media screen and (max-width: 444px) {
+  .textF {
+    padding-inline: 0rem;
   }
 }
