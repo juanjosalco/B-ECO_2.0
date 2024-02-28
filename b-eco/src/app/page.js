@@ -5,6 +5,7 @@ import WhoAreWe from './components/WhoAreWe'
 import Projects from './components/Projects'
 import FollowUs from './components/FollowUs'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 // Styles
 import './styles/Page.css'
@@ -23,6 +24,8 @@ export default function Home() {
       <FollowUs/>
       <div id="contacto"/>
       <Contact/>
+      <div id="footer"/>
+      <Footer/>
     </main>
   ) 
 }
