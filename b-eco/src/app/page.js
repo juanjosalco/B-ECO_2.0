@@ -23,7 +23,6 @@ export default function Home() {
       <FollowUs/>
       <div id="contacto"/>
       <Contact/>
-      {/* <div style={{marginTop: 80}}/> */}
     </main>
   ) 
 }

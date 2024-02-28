@@ -34,11 +34,9 @@ const Contact = () => {
                 onSubmit = {sendEmail}>
                     <section className="contactInfo">
                         <div className='names'>
-                            <div className='firstNameBox'>
-                                {/* <div className='firstName'> */}
+                            <div className='firstName'>
                                     <label for="fname" style={{fontWeight: "bold", marginLeft: "1rem"}}>Nombre(s)</label>
                                     <input type="text" id="fname" name="fname" className='FirstcontactInput'/>
-                                {/* </div> */}
                             </div>
                             <div className='lastName'>
                                 <label for="lname" style={{fontWeight: "bold", marginLeft: "1rem"}}>Apellido(s)</label>

@@ -1,3 +1,14 @@
+form{
+  padding: 4% 20% 0% 20%;
+  overflow-wrap: break-word;
+}
+
+@media screen and (min-width: 800px) {
+  form {
+    padding: 4% 35% 0% 35%;
+  }
+}
+
 .contactUsContainer {
     text-align: center;
     margin-top: 80px;
@@ -6,12 +17,7 @@
 }
 
 
-.contactIntro {
-  padding-inline: 10rem;
-}
-
 .contactInfo {
-    margin-top: 80px;
     text-align: justify;
 }
 
@@ -21,15 +27,9 @@
     justify-content: space-between;
 }
 
-.firstNameBox {
-    display: flex;
-    flex: column;
-    flex: 1;
-}
-
 .firstName {
-  flex-direction: row;
   display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
@@ -41,7 +41,7 @@
 
 .contactInput {
     flex: 1;
-    padding: 12px 20px;
+    padding: .5rem .8rem;
     margin: 10px;
     border-radius: .9rem;
     box-shadow: 0px 0px 1px 1px rgba(72, 77, 77, 0.4);
@@ -50,22 +50,26 @@
 
 .email{
   display: flex;
+  flex-direction: column;
   flex: 1;
+
 }
 
 .tel{
   display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
 .subject{
   display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
 .FirstcontactInput{
     flex: 1;
-    padding: 12px 20px;
+    padding: .5rem .8rem;
     margin: 10px;
     border-radius: .9rem;
     box-shadow: 0px 0px 1px 1px rgba(72, 77, 77, 0.4);
@@ -74,8 +78,7 @@
 
 .subjectInput{
     flex: 1;
-    height: 8rem;
-    padding: 12px 20px;
+    padding: .5rem .8rem;
     margin: 10px;
     border-radius: .9rem;
     box-shadow: 0px 0px 1px 1px rgba(72, 77, 77, 0.4);

@@ -8,13 +8,6 @@ export default function WhoAreWe() {
   return (
     <>
       <div className="containerWho">
-        <div className="leftSideWho">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FWhatsApp%20Image%202023-12-04%20at%2018.36.34.jpeg?alt=media&token=7b2a0c64-83a5-46b2-9870-9e7f44b52b4c"
-            className="imageWho"
-            alt="b-eco logo"
-          />
-        </div>
         <div className="textWho">
           <h2 className="title">¿Quiénes Somos?</h2>
           <p className="text">
@@ -32,6 +25,13 @@ export default function WhoAreWe() {
             impacto ambiental, cada proyecto refleja nuestro compromiso con la
             acción positiva y la creación de un futuro más sostenible.
           </p>
+        </div>
+        <div className="leftSideWho">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FWhatsApp%20Image%202023-12-04%20at%2018.36.34.jpeg?alt=media&token=7b2a0c64-83a5-46b2-9870-9e7f44b52b4c"
+            className="imageWho"
+            alt="b-eco logo"
+          />
         </div>
       </div>
     </>
