@@ -1,4 +1,5 @@
 // Components
+"use client";
 import Navbar from './components/Navbar'
 import HeaderCarousel from './components/HeaderCarousel'
 import WhoAreWe from './components/WhoAreWe'
@@ -6,15 +7,29 @@ import Projects from './components/Projects'
 import FollowUs from './components/FollowUs'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-
-// Styles
+import Sidebar from './components/Sidebar'
 import './styles/Page.css'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
+
+  const[isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 940);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return() => window.removeEventListener('resize', handleResize);
+
+  }, []);
+
   return (
     <main>
-      <Navbar />
-      <div id="inicio"/>
+      {isMobile? <Sidebar/> : <Navbar/>}
       <HeaderCarousel/>
       <div id="quienes-somos"/>
       <WhoAreWe/>
