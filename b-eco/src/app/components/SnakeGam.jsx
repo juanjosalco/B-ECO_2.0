@@ -4,10 +4,11 @@ import "../styles/SnakeGame.css"
 
 const Game = () => {
     return (
+      
         <section className="content-section" id="EcoSerpiente">
           <section>
-              <h2>ECO-Serpiente</h2>
-              <p>Ayudanos a recolectar desechos!</p>
+            <h2 style={{color: "#006733", fontSize: "2.5rem"}}>ECO-Serpiente</h2>
+            <p className='textSnake'> Ayudanos a recolectar desechos!</p>
               <SnakeGame/>
           </section>
         </section>

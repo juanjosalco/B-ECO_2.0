@@ -1,7 +1,7 @@
 "use client";
 import React, {useState, useEffect} from 'react';
 import '../styles/SnakeGame.css'
-import preGameImage from '../Assets/Snake/gameIntro.jpeg';
+// import preGameImage from '../Assets/Snake/gameIntro.jpeg';
 
 const ROWS = 10;
 const COLS = 10;
@@ -27,6 +27,17 @@ const foodImages = [
   'food-cell10',
 ];
 
+const bodyImages = {
+  upBody: 'up-body',
+  downBody: 'down-body',
+  leftBody: 'left-body',
+  rightBody: 'right-body',
+  upLeftCorner: 'up-left-corner',
+  upRightCorner: 'up-right-corner',
+  downLeftCorner: 'down-left-corner',
+  downRightCorner: 'down-right-corner',
+};
+
 const SnakeGame = () => {
   const initialSnake = [{ row: 0, col: 0 }];
   const initialFood = getRandomCell();
@@ -36,7 +47,8 @@ const SnakeGame = () => {
   const [snake, setSnake] = useState(initialSnake);
   const [food, setFood] = useState(getRandomCell());
   const [direction, setDirection] = useState('RIGHT');
-  const [headImage, setHeadImage] = useState('default-head-image'); // Add state to track the head image
+  const [headImage, setHeadImage] = useState('default-head-image'); // Track the head image
+  const [tailImage, setTailImage] = useState('default-tail-image'); // Track the tail image
 
   const [gameOver, setGameOver] = useState(false);
   const [gameStarted, setGameStarted] = useState(false); // 
@@ -44,14 +56,6 @@ const SnakeGame = () => {
   const [highestScore, setHighestScore] = useState(0);
 
   function play() {
-    // Add an event listener to the window to capture arrow key presses
-      window.addEventListener('keydown', function (e) {
-        // Check if the pressed key is an arrow key
-        if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
-          // Prevent the default behavior of arrow keys (scrolling)
-          e.preventDefault();
-        }
-      });
     setGameStarted(true); // Set game as started when "Play" button is clicked
     const preventScroll = (e) => {
       if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
@@ -65,35 +69,38 @@ const SnakeGame = () => {
     else {
       window.removeEventListener('keydown',preventScroll);
     }    
+
+    // Trigger habdkeKeyPress function to set the initial direction of the snake
+    handleKeyPress({key: 'ArrowRight'});
   }
 
   const handleKeyPress = (e) => {
     let newDirection = direction;
     let newHeadImage = headImage; // Variable to track the head image
 
-switch (e.key) {
-      case 'ArrowUp':
-        newDirection = 'UP';
-        newHeadImage = 'up-head-image'; // Set head image for 'UP'
-        break;
-      case 'ArrowDown':
-        newDirection = 'DOWN';
-        newHeadImage = 'down-head-image'; // Set head image for 'DOWN'
-        break;
-      case 'ArrowLeft':
-        newDirection = 'LEFT';
-        newHeadImage = 'left-head-image'; // Set head image for 'LEFT'
-        break;
-      case 'ArrowRight':
-        newDirection = 'RIGHT';
-        newHeadImage = 'right-head-image'; // Set head image for 'RIGHT'
-        break;
-      default:
-        break;
-    }
-    setDirection(newDirection);
-    setHeadImage(newHeadImage); // Update the head image state
-  };
+    switch (e.key) {
+        case 'ArrowUp':
+          newDirection = 'UP';
+          newHeadImage = 'up-head-image'; // Set head image for 'UP'
+          break;
+        case 'ArrowDown':
+          newDirection = 'DOWN';
+          newHeadImage = 'down-head-image'; // Set head image for 'DOWN'
+          break;
+        case 'ArrowLeft':
+          newDirection = 'LEFT';
+          newHeadImage = 'left-head-image'; // Set head image for 'LEFT'
+          break;
+        case 'ArrowRight':
+          newDirection = 'RIGHT';
+          newHeadImage = 'right-head-image'; // Set head image for 'RIGHT'
+          break;
+        default:
+          break;
+      }
+      setDirection(newDirection);
+      setHeadImage(newHeadImage); // Update the head image state
+    };
 
 
   useEffect(() => {
@@ -142,12 +149,31 @@ switch (e.key) {
         }
       }
       setSnake(newSnake);
+
+      if(newSnake.length > 1) {
+        const tail = newSnake[newSnake.length - 1];
+        const secondToLastSegment = newSnake[newSnake.length - 2];
+        if(tail.row === secondToLastSegment.row){
+          if (tail.col < secondToLastSegment.col){
+            setTailImage('left-tail-image');
+          } else {
+            setTailImage('right-tail-image');
+          }
+        } else {
+          if(tail.row < secondToLastSegment.row){
+            setTailImage('up-tail-image');
+          } else {
+            setTailImage('down-tail-image');
+          }
+        }
+      }
+
     };
 
     const intervalId = setInterval(handleGameTick, 300);
 
     return () => clearInterval(intervalId);
-  }, [snake, direction, food, gameOver]);
+  }, [snake, direction, food, gameOver, score, highestScore]);
 
   useEffect(() => {
     document.addEventListener('keydown', handleKeyPress);
@@ -162,19 +188,55 @@ switch (e.key) {
     setDirection(initialDirection);
     setGameOver(false);
     setScore(initialScore);
+    handleKeyPress({key: 'ArrowRight'});
+    document.removeEventListener('keydown', handleKeyPress);
   }
 
   // Function to check if a cell is the head of the snake
-  const isSnakeHead = (cell, index) => index === 0;
+  const isSnakeHead = (index) => index === 0;
+  const isSnakeTail = (index) => index === snake.length - 1;
+
+  // Function to determine the Body cell orientation
+  const determineOrientation = (index, snake) => {
+    const currentCell = snake[index];
+    const prevCell = snake[index + 1];
+    const nextCell = snake[index - 1];
+  
+    if (!prevCell || !nextCell) {
+      return ''; // If either prevCell or nextCell is undefined, no orientation needed
+    }
+    if (prevCell.row === nextCell.row) {
+      // Horizontal movement
+      return prevCell.col < nextCell.col ? 'right-body' : 'left-body';
+    } else if (prevCell.col === nextCell.col){
+      // Vertical movement
+      return prevCell.row < nextCell.row ? 'down-body' : 'up-body';
+    } else{ // Corners Orientations
+      if (prevCell.row === nextCell.row) {
+        // Horizontal movement
+        if (currentCell.row < prevCell.row) {
+          return prevCell.col < nextCell.col ? 'up-right-corner' : 'up-left-corner';
+        } else {
+          return prevCell.col < nextCell.col ? 'down-right-corner' : 'down-left-corner';
+        }
+      } else {
+        // Vertical movement
+        if (currentCell.col < prevCell.col) {
+          return prevCell.row < nextCell.row ? 'up-right-corner' : 'down-right-corner';
+        } else {
+          return prevCell.row < nextCell.row ? 'up-left-corner' : 'down-left-corner';
+        }
+      }
+    }
+  };
 
   return (
     <gameContainer>
       {!gameStarted && ( // Display content only if game hasn't started
         <div className="pre-game-content">
           <img 
-            src={preGameImage} 
-            // alt="Pre-game image"
-            style={{ width: '50rem', height: '40rem' }}
+            src="https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FgameIntro.jpeg?alt=media&token=21e2e2a3-1dd4-4883-9a0f-f3d836421253" 
+            style={{ width: '50rem', height: '50rem' }}
            />
         </div>  
       )}
@@ -182,41 +244,42 @@ switch (e.key) {
         <div>
           <container>
             <table>
-              <body>
+              <section className="gameBackground">
               {Array.from({ length: ROWS }).map((_, rowIndex) => (
                 <tr key={rowIndex}>
                   {Array.from({ length: COLS }).map((_, colIndex) => {
+                    let cellClassName = '';
                     const isSnakeCell = snake.some(
                       (cell) => cell.row === rowIndex && cell.col === colIndex
                     );
-                    return (
-                      <td
-                        key={`${rowIndex}-${colIndex}`}
-                        className={
-                          isSnakeCell
-                            ? isSnakeHead(
-                                { row: rowIndex, col: colIndex },
-                                snake.findIndex(
-                                  (cell) =>
-                                    cell.row === rowIndex && cell.col === colIndex
-                                )
-                              )
-                              ? headImage
-                              : 'snake-cell body'
-                            : food.row === rowIndex && food.col === colIndex
-                            ? foodImages[food.randomNumber]
-                            : ''
-                        }
-                      ></td>
-                    );
-                  })}
-                </tr>
-              ))}
-            </body>
-          </table>
-        </container>
-      </div>
-    )}
+                    if(isSnakeCell) {
+                        const index = snake.findIndex(
+                          (cell) => cell.row === rowIndex && cell.col === colIndex
+                        );
+                        const isHead = isSnakeHead(index);
+                        const isTail = isSnakeTail(index);
+                        const isBody = !isHead && !isTail;
+                        let bodyOrientationClass = '';
+                        cellClassName = isHead
+                          ? headImage
+                          : isTail
+                          ? tailImage
+                          : isBody
+                          ? determineOrientation(index, snake)
+                          : '';
+                      } else if (food.row === rowIndex && food.col === colIndex) {
+                        cellClassName = foodImages[food.randomNumber];
+                      }
+
+                      return <td key={`${rowIndex}-${colIndex}`} className={cellClassName}></td>;
+                    })}
+                  </tr>
+                ))}
+              </section>
+            </table>
+          </container>
+        </div>
+      )}
 
       <div className="play-buttons">
         {gameStarted && !gameOver &&( // Show "Play" button only if game hasn't started
