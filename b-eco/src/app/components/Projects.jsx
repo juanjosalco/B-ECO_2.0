@@ -9,64 +9,13 @@ import "../styles/Projects.css";
 import { projectsResources } from "../utils/Projects";
 
 const Projects = () => {
-  const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPageLoading, setIsPageLoading] = useState(false);
-
-  useEffect(() => {
-    const listNode = listRef.current;
-
-    // Check if listNode is defined before accessing its properties
-    if (listNode) {
-      const imgNode = listNode.querySelectorAll("img")[currentIndex];
-      if(isPageLoading){
-        if (imgNode) {
-          imgNode.scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "center",
-          });
-        }
-      }
-      setIsPageLoading(true);
-    }
-  }, [currentIndex]);
 
   const sliderStyles = {
     position: "relative",
     overflow: "hidden",
     height: 480,
     flex: 2,
-  };
-
-  const slideStyles = {
-    height: "100%",
-    borderTopLeftRadius: "10px",
-    borderBottomLeftRadius: "10px",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-  };
-
-  const projectsContainer = {
-    flex: 1,
-    height: 448,
-    display: "flex",
-    flexDirection: "column",
-    padding: "1rem",
-    textAlign: "justify",
-    justifyContent: "flex-start",
-    overflow: "scroll",
-  };
-
-  const mainStyles = {
-    margin: "0 auto",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "row",
-    width: "90%",
-    borderRadius: "10px",
-    boxShadow: "0px 0px 1px 1px rgba(72, 77, 77, 0.4)",
   };
 
   const goToPrevious = () => {
@@ -91,28 +40,22 @@ const Projects = () => {
         Proyectos
       </h2>
       <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          width: "90%",
-          margin: "auto",
-        }}
+        className="projectsContainer"
       >
         <p className="arrows" onClick={goToPrevious}>
           &#10092;
         </p>
-        <div style={mainStyles}>
-              <div style={sliderStyles} ref={listRef}>
-                {projectsResources.map((project, index) => (
+        <div className="mainContainer">
+              <div style={sliderStyles}>
+                
                   <img
-                    key={index}
-                    src={project.image}
-                    alt={project.title}
-                    style={slideStyles}
+                    src={projectsResources[currentIndex].image}
+                    alt={projectsResources[currentIndex].title}
+                    className="projectImage"
                   />
-                ))}
+              
           </div>
-          <div style={projectsContainer}>
+          <div className="textContainer">
             <h2 style={{ textAlign: "center", marginBottom: 16 }}>
               {projectsResources[currentIndex].title}
             </h2>

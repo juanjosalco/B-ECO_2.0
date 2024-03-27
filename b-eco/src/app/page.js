@@ -30,6 +30,7 @@ export default function Home() {
   return (
     <main>
       {isMobile? <Sidebar/> : <Navbar/>}
+      <div id="inicio"/>
       <HeaderCarousel/>
       <div id="quienes-somos"/>
       <WhoAreWe/>

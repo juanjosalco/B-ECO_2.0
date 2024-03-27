@@ -48,6 +48,11 @@ body {
   #main.open-main {
     margin-left: 250px;
   }
+
+  .titleHover:hover {
+    background-color: #039d50;
+    transition: 0.3s;
+  }
   
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}

@@ -1,139 +1,146 @@
-form{
-  padding: 4% 20% 0% 20%;
+input {
+  all: unset;
 }
 
-@media screen and (min-width: 700px) {
-  form {
-    padding: 4% 35% 0% 35%;
-  }
-  .names {
-    display: flex;
-    justify-content: space-between;
-}
-}
-
-@media screen and (min-width: 700px) and (max-width: 1000px){
-  form {
-    padding: 4% 20% 0% 20%;
-  }
-
-}
-
-.contactIntro{
-  padding-inline: 48px;
+textarea {
+  all: unset;
 }
 
 .contactUsContainer {
-    text-align: center;
-    margin-top: 80px;
-    align-items: center;
-    align-content: center;
+  text-align: center;
+  margin-top: 32px;
 }
-
 
 .contactInfo {
-    text-align: justify;
-}
-
-.names {
-    justify-content: space-between;
-}
-
-.firstName {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex: 1;
+  padding-inline: 8rem;
 }
-
-.lastName {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+.names {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.fName {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-top: 24px;
 }
 
 .contactInput {
-    flex: 1;
-    padding: .5rem .8rem;
-    margin: 10px;
-    border-radius: .9rem;
-    box-shadow: 0px 0px 1px 1px rgba(72, 77, 77, 0.4);
-    background-color: #efefef69;
+  text-align: left;
+  margin-left: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
 }
 
-.email{
+.email {
   display: flex;
-  flex-direction: column;
-  flex: 1;
-
-}
-
-.tel{
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 24px;
+  text-align: left;
+  align-items: center;
 }
 
 .subject{
   display: flex;
   flex-direction: column;
-  flex: 1;
-}
-
-.FirstcontactInput{
-    flex: 1;
-    padding: .5rem .8rem;
-    margin: 10px;
-    border-radius: .9rem;
-    box-shadow: 0px 0px 1px 1px rgba(72, 77, 77, 0.4);
-    background-color: #efefef69;
+  width: 100%;
+  margin-top: 24px;
 }
 
 .subjectInput{
-    padding: .5rem .8rem;
-    margin: 10px;
-    border-radius: .9rem;
-    box-shadow: 0px 0px 1px 1px rgba(72, 77, 77, 0.4);
-    background-color: #efefef9b;
-    height: 5rem;
+  text-align: left;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  flex: 1;
+  min-height: 96px;
+  margin-top: 8px;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 8px;
 }
 
-.sendInfo {
-  align-items: center;
+.contactInput:focus{
+  border: 2px solid #004697;
+}
+
+.subjectInput:focus{
+  border: 2px solid #004697;
 }
 
 .buttonEnviar {
-    display: inline-block;
-    border-radius: 4px;
-    background-color: #004697;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 20px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #004697;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 24px;
 }
 .buttonEnviar span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonEnviar span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonEnviar:hover span {
+  padding-right: 25px;
+}
+
+.buttonEnviar:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .contactInfo {
+    padding-inline: 24px;
   }
-  
-  .buttonEnviar span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
+  .fName {
+    flex-direction: column;
+    flex: 1;
+    margin-top: 16px;
   }
-  
-  .buttonEnviar:hover span {
-    padding-right: 25px;
+  .names{
+    flex-direction: column;
   }
-  
-  .buttonEnviar:hover span:after {
-    opacity: 1;
-    right: 0;
+  .contactInput {
+    margin-left: 0;
+    margin-top: 8px;
+    width: 100%;
   }
+  .contactUsContainer{
+    margin-inline: 24px
+  }
+  .email{
+    flex-direction: column;
+  }
+  .subject{
+    margin-top: 16px;
+  }
+
+}

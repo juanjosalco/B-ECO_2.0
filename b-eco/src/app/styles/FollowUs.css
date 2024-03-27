@@ -84,21 +84,18 @@
 
 .cards {
   align-self: center;
-  padding: 0% 20% 0% 20%;
 }
 
 @media (min-width: 960px) {
   .cards{
     display: flex;
     align-self: center;
-    padding: 0% 0% 0% 0%;
   }
 }
 
 @media (max-width: 444px) {
   .cards{
     align-self: center;
-    padding: 0% 0% 0% 0%;
   }
 }
 
@@ -118,5 +115,9 @@
 @media screen and (max-width: 444px) {
   .textF {
     padding-inline: 0rem;
+  }
+  .content-section{
+    padding-right: 24px;
+    padding-left: 24px;
   }
 }

@@ -11,3 +11,9 @@
   opacity: 0;
   transition: opacity 1s ease;
 }
+
+@media screen and (max-width: 600px){
+  .carousel-img{
+    height: 40vh;
+  }
+}

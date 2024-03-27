@@ -12,7 +12,7 @@ const Footer = () => {
         <footer>
             <div className="content">
                 <div className="rightsText">
-                    Todos los derechos reservados B-ECO 2023
+                    Todos los derechos reservados &#169; B-ECO 2023 ​
                 </div>
                 <div className="informationText">
                     Av. Gral Ramón Corona No 2514, 45201 Zapopan, Jal.

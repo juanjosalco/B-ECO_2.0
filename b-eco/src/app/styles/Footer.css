@@ -1,7 +1,7 @@
 footer{
     background-color: #006733;
     width: 100%;
-    margin-top: 80px;
+    margin-top: 24px;
 }
 
 .content{
@@ -20,3 +20,14 @@ footer{
 .informationText{
     color: #FFFFFF;
 } 
+
+@media screen and (max-width: 600px) {
+    .content{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+    
+}

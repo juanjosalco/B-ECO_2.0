@@ -37,22 +37,22 @@ function Sidebar() {
             <div id="mySidenav" className={`sidenav ${isOpen ? 'open' : ''}`}>
                 <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
                 <div>
-                    <a href="#inicio">
+                    <a href="#inicio" className='titleHover'>
                         Inicio
                     </a>
-                    <a href="#quienes-somos">
-                        ¿Quiénes somos?
+                    <a href="#quienes-somos" className='titleHover'>
+                       Nosotros
                     </a>
-                    <a href="#proyectos">
+                    <a href="#proyectos" className='titleHover'>
                         Proyectos
                     </a>
-                    <a href="#ecoserpiente">
+                    <a href="#ecoserpiente" className='titleHover'>
                         EcoSerpiente
                     </a>    
-                    <a href="#siguenos">
+                    <a href="#siguenos" className='titleHover'>
                         Síguenos
                     </a>
-                    <a href="#contacto">
+                    <a href="#contacto" className='titleHover'>
                         Contacto
                     </a>
                 </div>

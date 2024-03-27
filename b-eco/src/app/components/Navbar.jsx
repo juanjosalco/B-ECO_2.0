@@ -27,7 +27,7 @@ const Navbar = () => {
             Inicio
           </a>
           <a href="#quienes-somos" className="block">
-            ¿Quiénes somos?
+            Nosotros
           </a>
           <a href="#proyectos" className="block">
             Proyectos

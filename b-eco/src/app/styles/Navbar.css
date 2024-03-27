@@ -25,9 +25,9 @@
     height: 60px;
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 600px) {
     .b-eco_ai{
-        width: 0;
+        display: none;
     }
 }
 
@@ -46,7 +46,6 @@
 .navSection {
     font-size: 1rem;
     color: #006733;
-    text-decoration: None;
 }
 
 .block {
@@ -54,12 +53,17 @@
     display: flex;
     cursor: pointer;
     height: 100%;
+    min-width: 64px;
     align-items: center;
     padding-inline: 1rem;
     color: #006733;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .block:hover {
     color: #ffffff;
     background-color: #006733;
+    transition: 0.3s;
 }
