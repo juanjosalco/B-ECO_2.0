@@ -5,7 +5,7 @@ table {
 
 td {
   width: 5rem;
-  height: 4rem;
+  height: 5rem;
   border: .01rem solid rgba(9, 43, 9, 0.194);
 }
 
@@ -53,28 +53,28 @@ td {
 /* Tail */
 
 .up-tail-image{
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FHeadRight.png?alt=media&token=a3900023-eb58-4b92-a3c0-a2afbd4d3027');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FTail.png?alt=media&token=d0927948-b4c5-4a13-9664-349fd4255f97');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
 }
 
 .down-tail-image{
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FHeadRight.png?alt=media&token=a3900023-eb58-4b92-a3c0-a2afbd4d3027');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FTail-Up.png?alt=media&token=4aa4af73-67d0-441d-9ad4-efff549ef21a');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
 }
 
 .left-tail-image{
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FHeadLeft.png?alt=media&token=7a700f8e-18b5-4679-9772-6deb808f55f5');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FTail-Left.png?alt=media&token=65cdb13c-3a5a-4f17-a8ea-af7074a750f9');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
 }
 
 .right-tail-image{
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FHeadRight.png?alt=media&token=a3900023-eb58-4b92-a3c0-a2afbd4d3027');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FTail-Right.png?alt=media&token=0602180b-af54-4d88-b7ff-e69c909e76b6');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
@@ -83,28 +83,28 @@ td {
 /* Body */
 
 .up-body {
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBody-up.png?alt=media&token=5f663e55-2abf-4b28-b143-d8cb20dee3ad');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBody-up.png?alt=media&token=b53f2483-9c8a-47c3-8b1f-d18dc0e6f115');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
 }
 
 .down-body {
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBodySprite.png?alt=media&token=7cc704cd-2e9b-4fe9-bb9b-ba27737a0f5f');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBody-down.png?alt=media&token=ae7d6d92-83b2-4555-a0a7-87a6349bc18d');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
 }
 
 .left-body {
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBody-left.png?alt=media&token=820c8d9d-cb9a-4aea-a58c-c64500cf034d');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBody-left.png?alt=media&token=4d67bc55-e8ac-49eb-9a46-5123cc1fba5f');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
 }
 
 .right-body {
-  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBody-right.png?alt=media&token=1d6dabd5-a894-4160-8e6e-3b162c447e01');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBody-right.png?alt=media&token=76437f28-35dd-43d4-9aa7-09d6403b3710');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 

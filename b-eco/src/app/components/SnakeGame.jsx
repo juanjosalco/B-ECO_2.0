@@ -236,7 +236,7 @@ const SnakeGame = () => {
         <div className="pre-game-content">
           <img 
             src="https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FgameIntro.jpeg?alt=media&token=21e2e2a3-1dd4-4883-9a0f-f3d836421253" 
-            style={{ width: '50rem', height: '40rem' }}
+            style={{ width: '50rem', height: '50rem' }}
            />
         </div>  
       )}
