@@ -1,126 +1,216 @@
 table {
-    border-collapse: collapse;
-    align-self: center;
-  }
+  border-collapse: collapse;
+  align-self: center;
+}
 
-  td {
-    width: 5rem;
-    height: 4rem;
-    border: .01rem solid rgba(9, 43, 9, 0.194);
-  }
+td {
+  width: 5rem;
+  height: 4rem;
+  border: .01rem solid rgba(9, 43, 9, 0.194);
+}
 
-  .snake-cell {
-    background-color: orangered;
-  }
+.textSnake {
+  font-size: 1.2rem;
+  padding-inline: 2rem;
+  text-align: center;
+  margin: 2rem 0rem 2rem 0rem;
+}
 
-  .up-head-image{
-    background-image: url('../Assets/Snake/HeadUp.png');
+.snake-cell {
+  background-color: orangered;
+}
+
+/* Head */
+
+.up-head-image{
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FHeadUp.png?alt=media&token=b14cf3d8-1507-4f93-9ed2-acce4d061794');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.down-head-image{
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FHeadDown.png?alt=media&token=f6104a57-5900-45be-a5e1-bdd61f18364b');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.left-head-image{
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FHeadLeft.png?alt=media&token=7a700f8e-18b5-4679-9772-6deb808f55f5');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.right-head-image{
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FHeadRight.png?alt=media&token=a3900023-eb58-4b92-a3c0-a2afbd4d3027');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+/* Tail */
+
+.up-tail-image{
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FHeadRight.png?alt=media&token=a3900023-eb58-4b92-a3c0-a2afbd4d3027');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.down-tail-image{
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FHeadRight.png?alt=media&token=a3900023-eb58-4b92-a3c0-a2afbd4d3027');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.left-tail-image{
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FHeadLeft.png?alt=media&token=7a700f8e-18b5-4679-9772-6deb808f55f5');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.right-tail-image{
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FHeadRight.png?alt=media&token=a3900023-eb58-4b92-a3c0-a2afbd4d3027');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+/* Body */
+
+.up-body {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBody-up.png?alt=media&token=5f663e55-2abf-4b28-b143-d8cb20dee3ad');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.down-body {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBodySprite.png?alt=media&token=7cc704cd-2e9b-4fe9-bb9b-ba27737a0f5f');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.left-body {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBody-left.png?alt=media&token=820c8d9d-cb9a-4aea-a58c-c64500cf034d');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.right-body {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBody-right.png?alt=media&token=1d6dabd5-a894-4160-8e6e-3b162c447e01');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+  /* Body Corners */
+
+  .up-right-corner {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FProfile.png?alt=media&token=18f923fa-97fa-41ff-9d09-9b63a85807e0');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
   }
 
-  .down-head-image{
-    background-image: url('../Assets/Snake/HeadDown.png');
+  .up-left-corner {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FProfile.png?alt=media&token=18f923fa-97fa-41ff-9d09-9b63a85807e0');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
   }
 
-  .left-head-image{
-    background-image: url('../Assets/Snake/HeadLeft.png');
+  .down-right-corner {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FProfile.png?alt=media&token=18f923fa-97fa-41ff-9d09-9b63a85807e0');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
   }
 
-  .right-head-image{
-    background-image: url('../Assets/Snake/HeadRight.png');
+  .down-left-corner {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FProfile.png?alt=media&token=18f923fa-97fa-41ff-9d09-9b63a85807e0');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
   }
-  
-  .body {
-    background-image: url('../Assets/Snake/BodySprite.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
-  }
-  
-  .food-cell {
-    background-image: url('../Assets/TrashPics/Bag.png'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
+
+/* Food/Trash */
+
+.food-cell {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBag.png?alt=media&token=f514a4eb-805e-4442-a02d-a23f741551dd'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
 }
 .food-cell2 {
-      background-image: url('../Assets/TrashPics/Banana.png'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBanana.png?alt=media&token=acef29b4-b11d-4e40-8e03-c95249d3e236'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
 }
 .food-cell3 {
-      background-image: url('../Assets/TrashPics/Bottle.png'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; 
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBottle.png?alt=media&token=ee0b5fe2-9c00-4812-abdc-aa769b79db2f'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
 }
 .food-cell4 {
-  
-  background-image: url('../Assets/TrashPics/BrokenGlass.png'); 
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBrokenGlass.png?alt=media&token=2f475d8a-9c83-4485-9e2c-841efd00afaa'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell5 {
-  
-  background-image: url('../Assets/TrashPics/Can.png'); 
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FCan.png?alt=media&token=36219de0-f32e-4a5f-98af-6f0da87c0758'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell6 {
-  
-  background-image: url('../Assets/TrashPics/Foam.png'); 
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FFoam.png?alt=media&token=8114b211-e7dc-4bde-93fe-896aca92d03a'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell7 {
-  
-  background-image: url('../Assets/TrashPics/FoodWaste.png'); 
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FFoodWaste.png?alt=media&token=6d46f7a0-c311-4da7-a974-bfcb48bb61f7'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell8 {
-  
-  background-image: url('../Assets/TrashPics/Needle.png'); 
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FNeedle.png?alt=media&token=2032b1a6-7c00-43c2-ac28-c3a174a4a5de'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell9 {
-  
-  background-image: url('../Assets/TrashPics/Newspaper.png'); 
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FNewspaper.png?alt=media&token=a0642707-cc97-47f6-aa53-0f0522a08ee9'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell10 {
-  background-image: url('../Assets/TrashPics/PlasticBag.png'); 
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FPlasticBag.png?alt=media&token=7f59fce0-8684-4712-b6d3-0ffcf1df03bc'); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
 }
 
+/* Game */
+
   gameContainer {
     margin: auto;
   }
 
-  body {
-    background-image: url('../Assets/Snake/park.jpg'); 
+  .gameBackground {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2Fpark.jpg?alt=media&token=254986a7-e61f-405a-a4f9-ea89d1695d68'); 
     background-size: cover; 
     background-repeat: no-repeat; 
   }

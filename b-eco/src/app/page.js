@@ -8,6 +8,7 @@ import FollowUs from './components/FollowUs'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Sidebar from './components/Sidebar'
+import SnakeGam from './components/SnakeGam';
 import './styles/Page.css'
 import { useEffect, useState } from 'react'
 
@@ -35,6 +36,8 @@ export default function Home() {
       <WhoAreWe/>
       <div id="proyectos"/>
       <Projects/>
+      <div id="ecoserpiente"/>
+      <SnakeGam/>
       <div id="siguenos"/>
       <FollowUs/>
       <div id="contacto"/>
