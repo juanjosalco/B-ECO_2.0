@@ -211,24 +211,25 @@ const SnakeGame = () => {
     } else if (prevCell.col === nextCell.col){
       // Vertical movement
       return prevCell.row < nextCell.row ? 'down-body' : 'up-body';
-    } else{ // Corners Orientations
-      if (prevCell.row === nextCell.row) {
+    } else{ 
+      // Corners Orientations
+      if (currentCell.row === prevCell.row) {
         // Horizontal movement
-        if (currentCell.row < prevCell.row) {
-          return prevCell.col < nextCell.col ? 'up-right-corner' : 'up-left-corner';
-        } else {
-          return prevCell.col < nextCell.col ? 'down-right-corner' : 'down-left-corner';
+        if(currentCell.col < prevCell.col){
+          return nextCell.row > currentCell.row ? 'up-right-corner' : 'down-left-corner';
+        } else if (currentCell.col > prevCell.col){
+          return nextCell.row > currentCell.row ? 'up-left-corner' : 'down-right-corner';
         }
-      } else {
+      } else { 
         // Vertical movement
-        if (currentCell.col < prevCell.col) {
-          return prevCell.row < nextCell.row ? 'up-right-corner' : 'down-right-corner';
-        } else {
-          return prevCell.row < nextCell.row ? 'up-left-corner' : 'down-left-corner';
+        if(currentCell.row < prevCell.row){
+          return nextCell.col > currentCell.col ? 'up-right-corner' : 'up-left-corner';
+        } else if (currentCell.row > prevCell.row){
+          return nextCell.col > currentCell.col ? 'down-left-corner' : 'down-right-corner';
         }
       }
     }
-  };
+  };  
 
   return (
     <gameContainer>
