@@ -38,7 +38,7 @@ export default function Home() {
       <div id="proyectos"/>
       <Projects/>
       <div id="ecoserpiente"/>
-      <SnakeGam/>
+      {!isMobile? <div><div id="ecoserpiente"/> <SnakeGam/></div> : ''}
       <div id="siguenos"/>
       <FollowUs/>
       <div id="contacto"/>
