@@ -46,9 +46,9 @@ function Sidebar() {
                     <a href="#proyectos" className='titleHover'>
                         Proyectos
                     </a>
-                    <a href="#ecoserpiente" className='titleHover'>
+                    {/* <a href="#ecoserpiente" className='titleHover'>
                         EcoSerpiente
-                    </a>    
+                    </a>     */}
                     <a href="#siguenos" className='titleHover'>
                         Síguenos
                     </a>

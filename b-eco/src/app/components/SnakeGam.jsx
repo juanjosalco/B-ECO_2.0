@@ -8,7 +8,8 @@ const Game = () => {
         <section className="content-section" id="EcoSerpiente">
           <section>
             <h2 style={{color: "#006733", fontSize: "2.5rem"}}>ECO-Serpiente</h2>
-            <p className='textSnake'> Ayudanos a recolectar desechos!</p>
+            <p className='textSnake'> Ayudanos a recolectar desechos! </p>
+            <p className='instructions'>Ingresa desde una computadora para poder jugar</p>
               <SnakeGame/>
           </section>
         </section>

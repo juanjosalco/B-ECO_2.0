@@ -3,15 +3,21 @@ import React, {useState, useEffect} from 'react';
 import '../styles/SnakeGame.css'
 // import preGameImage from '../Assets/Snake/gameIntro.jpeg';
 
-const ROWS = 10;
-const COLS = 10;
+const ROWS = 9;
+const COLS = 9;
 
 // RandomCell for food
-const getRandomCell = () => ({
-  row: Math.floor(Math.random() * ROWS),
-  col: Math.floor(Math.random() * COLS),
-  randomNumber: Math.floor(Math.random() * (9 - 0 + 1)) + 0,
-});
+const getRandomCell = (snake) => {
+  let newFood;
+  do {
+    newFood = {
+      row: Math.floor(Math.random() * ROWS),
+      col: Math.floor(Math.random() * COLS),
+      randomNumber: Math.floor(Math.random() * (9 - 0 + 1)) + 0,  
+    };
+  } while (snake && snake.some((cell) => cell.row === newFood.row && cell.col === newFood.col));
+  return newFood;
+};
 
 // Array of image paths
 const foodImages = [
@@ -27,20 +33,9 @@ const foodImages = [
   'food-cell10',
 ];
 
-const bodyImages = {
-  upBody: 'up-body',
-  downBody: 'down-body',
-  leftBody: 'left-body',
-  rightBody: 'right-body',
-  upLeftCorner: 'up-left-corner',
-  upRightCorner: 'up-right-corner',
-  downLeftCorner: 'down-left-corner',
-  downRightCorner: 'down-right-corner',
-};
-
 const SnakeGame = () => {
   const initialSnake = [{ row: 0, col: 0 }];
-  const initialFood = getRandomCell();
+  const initialFood = getRandomCell(initialSnake);
   const initialDirection = 'RIGHT';
   const initialScore = 0;
 
@@ -132,7 +127,7 @@ const SnakeGame = () => {
 
       if (head.row === food.row && head.col === food.col) {
         setScore(score + 1);
-        setFood(getRandomCell());
+        setFood(getRandomCell(snake));
       } else {
         newSnake.pop();
       }

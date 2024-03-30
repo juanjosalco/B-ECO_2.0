@@ -16,6 +16,14 @@ td {
   margin: 2rem 0rem 2rem 0rem;
 }
 
+.instructions {
+  font-size: 1rem;
+  padding-inline: 2rem;
+  text-align: center;
+  margin: 0rem 0rem 2rem 0rem;
+  color: #006733;
+}
+
 .snake-cell {
   background-color: orangered;
 }
@@ -144,61 +152,61 @@ td {
 
 .food-cell {
   background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBag.png?alt=media&token=f514a4eb-805e-4442-a02d-a23f741551dd'); 
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell2 {
   background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBanana.png?alt=media&token=acef29b4-b11d-4e40-8e03-c95249d3e236'); 
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell3 {
   background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBottle.png?alt=media&token=ee0b5fe2-9c00-4812-abdc-aa769b79db2f'); 
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell4 {
   background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FBrokenGlass.png?alt=media&token=2f475d8a-9c83-4485-9e2c-841efd00afaa'); 
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell5 {
   background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FCan.png?alt=media&token=36219de0-f32e-4a5f-98af-6f0da87c0758'); 
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell6 {
   background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FFoam.png?alt=media&token=8114b211-e7dc-4bde-93fe-896aca92d03a'); 
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell7 {
   background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FFoodWaste.png?alt=media&token=6d46f7a0-c311-4da7-a974-bfcb48bb61f7'); 
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell8 {
   background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FNeedle.png?alt=media&token=2032b1a6-7c00-43c2-ac28-c3a174a4a5de'); 
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell9 {
   background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FNewspaper.png?alt=media&token=a0642707-cc97-47f6-aa53-0f0522a08ee9'); 
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
 }
 .food-cell10 {
   background-image: url('https://firebasestorage.googleapis.com/v0/b/b-eco-18c09.appspot.com/o/Assets%2FPlasticBag.png?alt=media&token=7f59fce0-8684-4712-b6d3-0ffcf1df03bc'); 
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center; 
 }
