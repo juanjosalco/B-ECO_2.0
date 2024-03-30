@@ -211,21 +211,17 @@ const SnakeGame = () => {
     } else if (prevCell.col === nextCell.col){
       // Vertical movement
       return prevCell.row < nextCell.row ? 'down-body' : 'up-body';
-    } else{ // Corners Orientations
-      // if (currentCell.row === prevCell.row) {
-      //   // Horizontal movement
-      //   return currentCell.col > prevCell.col ? 'up-left-corner' : 'up-right-corner';
-      // } else {
-      //   // Vertical movement
-      //   return currentCell.row > prevCell.row ? 'down-left-corner' : 'down-right-corner';
-      // } 
+    } else{ 
+      // Corners Orientations
       if (currentCell.row === prevCell.row) {
+        // Horizontal movement
         if(currentCell.col < prevCell.col){
           return nextCell.row > currentCell.row ? 'up-right-corner' : 'down-left-corner';
         } else if (currentCell.col > prevCell.col){
           return nextCell.row > currentCell.row ? 'up-left-corner' : 'down-right-corner';
         }
-      } else {
+      } else { 
+        // Vertical movement
         if(currentCell.row < prevCell.row){
           return nextCell.col > currentCell.col ? 'up-right-corner' : 'up-left-corner';
         } else if (currentCell.row > prevCell.row){
