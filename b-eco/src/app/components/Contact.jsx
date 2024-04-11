@@ -31,7 +31,7 @@ const Contact = () => {
     <section className="contactUsContainer">
       <section>
         <h2 style={{ color: "#006733", fontSize: "2.5rem" }}>
-          Quieres colaborar con nosotros?
+          ¿Quieres colaborar con nosotros?
         </h2>
         <p className="textF">
           En el corazón del cambio y la acción, te invitamos a ser parte de algo
