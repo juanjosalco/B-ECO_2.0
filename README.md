@@ -7,3 +7,6 @@
 [Visit the B-eco Website](https://b-eco.vercel.app/)
 
 B-ECO is a website dedicated to the B-eco social project, which focuses on actively immersing itself in specific projects that address environmental and social problems in our community. From awareness campaigns to environmental impact initiatives, each project reflects our commitment to positive action and creating a more sustainable future.
+
+![B-ECO Logo](LandingPage)
+![B-ECO Logo](ContactInfo)
